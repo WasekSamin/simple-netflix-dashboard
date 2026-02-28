@@ -108,7 +108,7 @@ const AddUserPage = () => {
     onError: (err: Record<string, any>) => {
       toast({
         title: "Error!",
-        description: err?.message || "Failed to update profile info!",
+        description: err?.message || "Failed to create new user!",
         variant: "destructive",
       });
     },

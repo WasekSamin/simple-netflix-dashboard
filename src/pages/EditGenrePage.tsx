@@ -84,7 +84,7 @@ const EditGenrePage = () => {
     onError: (err: Record<string, any>) => {
       toast({
         title: "Error!",
-        description: err?.message || "Failed to update profile info!",
+        description: err?.message || "Failed to update the genre!",
         variant: "destructive",
       });
     },

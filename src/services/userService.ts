@@ -65,8 +65,8 @@ const updateUser = async ({
 
 const getUsers = async ({
   currentPage,
-  sortBy,
-  direction,
+  sortBy="id",
+  direction="desc",
   query,
   status,
   signal,

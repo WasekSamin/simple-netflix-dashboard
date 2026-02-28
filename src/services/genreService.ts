@@ -3,8 +3,8 @@ import { requestSubmit } from "@/utils/Provider";
 
 const getGenres = async ({
   currentPage,
-  sortBy,
-  direction,
+  sortBy="id",
+  direction="desc",
   query,
   status,
   fetchAll,
