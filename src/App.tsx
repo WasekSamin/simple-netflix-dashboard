@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import MoviesPage from "./pages/MoviesPage";
 import UsersPage from "./pages/UsersPage";
@@ -16,6 +16,9 @@ import NotFound from "./pages/NotFound";
 import AuthGuard from "./components/AuthGuard";
 import LoginPage from "./pages/LoginPage";
 import EditUserPage from "./pages/EditUserPage";
+import AddGenrePage from "./pages/AddGenrePage";
+import GenresPage from "./pages/GenresPage";
+import EditGenrePage from "./pages/EditGenrePage";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +38,9 @@ const App = () => {
               <Route path="/users" element={<UsersPage />} />
               <Route path="/users/add" element={<AddUserPage />} />
               <Route path="/users/:id" element={<EditUserPage />} />
+              <Route path="/genres" element={<GenresPage />} />
+              <Route path="/genres/add" element={<AddGenrePage />} />
+              <Route path="/genres/:id" element={<EditGenrePage />} />
               <Route path="/subscriptions" element={<SubscriptionsPage />} />
               <Route path="/payments" element={<PaymentsPage />} />
               <Route path="/analytics" element={<AnalyticsPage />} />

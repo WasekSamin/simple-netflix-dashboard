@@ -26,11 +26,11 @@ const editUserSchema = z
     firstName: z
       .string()
       .min(1, "First name is required")
-      .max(50, "First name must be 50 characters or less"),
+      .max(60, "First name must be 50 characters or less"),
     lastName: z
       .string()
       .min(1, "Last name is required")
-      .max(50, "Last name must be 50 characters or less"),
+      .max(60, "Last name must be 50 characters or less"),
     email: z
       .string()
       .min(1, "Email is required")
@@ -205,7 +205,7 @@ const EditUserPage = () => {
               <Input
                 id="firstName"
                 placeholder="John"
-                maxLength={50}
+                maxLength={60}
                 className="bg-card border-border"
                 {...register("firstName")}
               />
@@ -218,7 +218,7 @@ const EditUserPage = () => {
               <Input
                 id="lastName"
                 placeholder="Doe"
-                maxLength={50}
+                maxLength={60}
                 className="bg-card border-border"
                 {...register("lastName")}
               />

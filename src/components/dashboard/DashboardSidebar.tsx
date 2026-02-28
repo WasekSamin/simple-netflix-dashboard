@@ -7,6 +7,7 @@ import {
   Settings,
   TrendingUp,
   EllipsisVertical,
+  Popcorn,
 } from "lucide-react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -18,6 +19,7 @@ const navItems = [
   { icon: LayoutDashboard, label: "Dashboard", to: "/" },
   { icon: Film, label: "Movies", to: "/movies" },
   { icon: Users, label: "Users", to: "/users" },
+  { icon: Popcorn, label: "Genres", to: "/genres" },
   { icon: CreditCard, label: "Subscriptions", to: "/subscriptions" },
   { icon: Receipt, label: "Payments", to: "/payments" },
   { icon: TrendingUp, label: "Analytics", to: "/analytics" },

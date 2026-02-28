@@ -107,7 +107,7 @@ const AddMoviePage = () => {
 
   return (
     <DashboardLayout>
-      <div className="max-w-2xl">
+      <div>
         <button onClick={() => navigate("/movies")} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
           <ArrowLeft className="h-4 w-4" /> Back to Movies
         </button>
@@ -215,7 +215,7 @@ const AddMoviePage = () => {
                         value={season.name}
                         onChange={(e) => updateSeasonName(sIndex, e.target.value)}
                         className="h-7 bg-transparent border-none px-1 text-sm font-medium text-card-foreground focus-visible:ring-0 focus-visible:ring-offset-0"
-                        maxLength={50}
+                        maxLength={60}
                       />
                       <span className="text-[11px] text-muted-foreground whitespace-nowrap">{season.episodes.length} ep</span>
                       {seasons.length > 1 && (
