@@ -11,8 +11,7 @@ A modern React application built with Vite for data management and visualization
 
 - ⚡ **Fast Development** - Vite-powered with instant HMR
 - 🔒 **Type Safety** - Built with TypeScript
-- 🎨 **Modern UI** - Styled with Tailwind CSS
-- 📱 **Responsive Design** - Mobile-first approach
+- 🎨 **Modern UI** - Styled with Tailwind CSS and Shadcn
 - 🎯 **ESLint & Prettier** - Code quality and formatting
 - 🌙 **Dark Mode** - Built-in theme support
 
@@ -31,3 +30,18 @@ node --version
 npm --version
 git --version
 ```
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/WasekSamin/simple-netflix-dashboard.git
+cd simple-netflix-dashboard
+```
+
+### 2. Run
+
+Run the project on the terminal using this command:
+```bash
+npm run dev
