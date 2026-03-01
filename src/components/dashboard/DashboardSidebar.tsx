@@ -2,10 +2,7 @@ import {
   Film,
   LayoutDashboard,
   Users,
-  CreditCard,
-  Receipt,
   Settings,
-  TrendingUp,
   EllipsisVertical,
   Popcorn,
 } from "lucide-react";
@@ -20,9 +17,6 @@ const navItems = [
   { icon: Film, label: "Movies", to: "/movies" },
   { icon: Users, label: "Users", to: "/users" },
   { icon: Popcorn, label: "Genres", to: "/genres" },
-  { icon: CreditCard, label: "Subscriptions", to: "/subscriptions" },
-  { icon: Receipt, label: "Payments", to: "/payments" },
-  { icon: TrendingUp, label: "Analytics", to: "/analytics" },
   { icon: Settings, label: "Settings", to: "/settings" },
 ];
 

@@ -451,7 +451,6 @@ const AddMoviePage = () => {
   });
 
   const onSubmit = (formData: FormValues) => {
-    console.log(formData);
     addNewMovie(formData);
   };
 
@@ -478,9 +477,7 @@ const AddMoviePage = () => {
         </div>
 
         <form
-          onSubmit={handleSubmit(onSubmit, (errors) =>
-            console.log("Validation errors:", errors),
-          )}
+          onSubmit={handleSubmit(onSubmit)}
           className="space-y-6"
         >
           {/* Title */}

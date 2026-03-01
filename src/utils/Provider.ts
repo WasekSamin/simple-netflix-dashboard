@@ -1,4 +1,5 @@
 import { Axios } from '@/lib/api';
+import { userLogout } from '@/lib/auth';
 import { useAuthStore } from '@/store/AuthStore';
 import { ResponseType } from '@/types/types';
 import type {
@@ -69,6 +70,10 @@ const requestSubmit = async <T = unknown>({
       headers: res?.headers,
     };
   } catch (err) {
+    if (err.response?.data?.message === "Access Denied") {
+      userLogout();
+      return null;
+    }
     return {
       status: 400,
       data: null as unknown as T,

@@ -13,18 +13,22 @@ import { loginSubmit } from "@/services/loginService";
 import { AuthStoreType, useAuthStore } from "@/store/AuthStore";
 import { getCurrentLoggedInUser } from "@/services/userService";
 import { AuthType } from "@/types/auth";
+import { copyText } from "@/utils/copy";
 
 const loginSchema = z.object({
   email: z
     .string()
     .min(1, "Email is required")
     .email("Please enter a valid email"),
-  password: z
-    .string()
-    .min(1, "Password is required")
+  password: z.string().min(1, "Password is required"),
 });
 
 type LoginFormData = z.infer<typeof loginSchema>;
+
+const DUMMY_ADMIN = {
+  email: "admin@gmail.com",
+  password: "!Admin1278",
+};
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -169,6 +173,35 @@ const LoginPage = () => {
         </form>
 
         <p className="text-center text-sm text-muted-foreground">
+          Try email:{" "}
+          <span
+            onClick={() => {
+              toast({
+                title: "Success",
+                description: "Copied to clipboard.",
+              });
+              copyText(DUMMY_ADMIN.email);
+            }}
+            className="hover:underline hover:cursor-pointer"
+          >
+            {DUMMY_ADMIN.email}
+          </span>
+          , and password:{" "}
+          <span
+            className="hover:underline hover:cursor-pointer"
+            onClick={() => {
+              toast({
+                title: "Success",
+                description: "Copied to clipboard.",
+              });
+              copyText(DUMMY_ADMIN.password);
+            }}
+          >
+            {DUMMY_ADMIN.password}
+          </span>
+        </p>
+
+        {/* <p className="text-center text-sm text-muted-foreground">
           Don't have an account?{" "}
           <button
             type="button"
@@ -183,7 +216,7 @@ const LoginPage = () => {
           >
             Request access
           </button>
-        </p>
+        </p> */}
       </div>
     </div>
   );
