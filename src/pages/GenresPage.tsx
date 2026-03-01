@@ -150,6 +150,9 @@ const GenresPage = () => {
                   Genre
                 </th>
                 <th className="px-5 py-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                  Created At
+                </th>
+                <th className="px-5 py-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
                   Actions
                 </th>
               </tr>
